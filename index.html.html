@@ -1,0 +1,5085 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>高考志愿</title>
+    <style>
+      table {
+        width: 100%;
+      }
+
+      thead {
+        font-weight: 900;
+      }
+      
+      td {
+        border-bottom: 1px solid gray;
+        white-space: nowrap;
+        font-size: 14px;
+        padding:  1em;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      p > span:not(:empty) {
+        display: inline-block;
+        margin-right: 1em;
+        font-size: .7em;
+        color: dimgray;
+      }
+
+      .l1 {
+        padding: .3em 1em;
+        border-radius: 3px;
+        color: white;
+        background-color: rgb(208, 2, 26);
+      }
+      
+      .l2 {
+        padding: .3em 1em;
+        border-radius: 3px;
+        color: white;
+        background-color: rgb(255, 153, 0);
+      }
+
+      .l3 {
+        padding: .3em 1em;
+        border-radius: 3px;
+        color: white;
+        background-color: rgb(2, 207, 151);
+      }
+    </style>
+  </head>
+  <body>
+    <table class="school-table">
+      <thead class="school-thead">
+        <tr>
+          <td>学校名称</td>
+          <td>所在地</td>
+          <td colspan="2">2018年分数线</td>
+          <td>录取概率</td>
+          <td>部分开设专业</td>
+        </tr>
+      </thead>
+      <tbody class="school-tbody" id="tbody">
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  西安邮电大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">陕西</td>
+          <td>最低分</td>
+          <td>594</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">通信工程</li>
+              <li class="hoverschoolname">信息工程</li>
+              <li class="hoverschoolname">广播电视工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>607</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  大连理工大学盘锦校区
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">辽宁</td>
+          <td>最低分</td>
+          <td>594</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">
+                能源化学工程
+              </li>
+              <li class="hoverschoolname">应用化学</li>
+              <li class="hoverschoolname">化学工程与工艺（石油化工）</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>619</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  湖南师范大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>师范类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">湖南</td>
+          <td>最低分</td>
+          <td>594</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">计算机科学与技术</li>
+              <li class="hoverschoolname">文化产业管理</li>
+              <li class="hoverschoolname">历史学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>618</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  南京农业大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>农林类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">江苏</td>
+          <td>最低分</td>
+          <td>594</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">农学</li>
+              <li class="hoverschoolname">种子科学与工程</li>
+              <li class="hoverschoolname">金善宝（实验班）（植物生产类）</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  上海理工大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">上海</td>
+          <td>最低分</td>
+          <td>593</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">光电信息科学与工程（中德合作）</li>
+              <li class="hoverschoolname">
+                机械设计制造及其自动化（国际工程）（中德合作）
+              </li>
+              <li class="hoverschoolname">国际经济与贸易（中德合作）</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  安徽财经大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>财经类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">安徽</td>
+          <td>最低分</td>
+          <td>593</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">经济学</li>
+              <li class="hoverschoolname">国民经济管理</li>
+              <li class="hoverschoolname">国际经济与贸易</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  南昌大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>综合类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">江西</td>
+          <td>最低分</td>
+          <td>593</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">物流管理</li>
+              <li class="hoverschoolname">医学检验技术</li>
+              <li class="hoverschoolname">汉语言文学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  南京信息工程大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>双一流</span><span>理工类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">江苏</td>
+          <td>最低分</td>
+          <td>593</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">金融工程</li>
+              <li class="hoverschoolname">国际经济与贸易</li>
+              <li class="hoverschoolname">经济与贸易类（中外合作办学）</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>644</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  中国地质大学（武汉）
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>理工类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">湖北</td>
+          <td>最低分</td>
+          <td>591.13</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">空间信息与数字技术</li>
+              <li class="hoverschoolname">软件工程</li>
+              <li class="hoverschoolname">信息与计算科学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  安徽医科大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>医药类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">安徽</td>
+          <td>最低分</td>
+          <td>591</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">公共事业管理（医院管理方向）</li>
+              <li class="hoverschoolname">劳动与社会保障（健康管理方向）</li>
+              <li class="hoverschoolname">医学检验技术（中外合作培养）</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>596</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  中国地质大学（北京）
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>其他</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">北京</td>
+          <td>最低分</td>
+          <td>591</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">地质学（基地班）</li>
+              <li class="hoverschoolname">
+                工商管理（（地球科学与商务）国际班）
+              </li>
+              <li class="hoverschoolname">数学与应用数学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>608</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  华中农业大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>农林类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">湖北</td>
+          <td>最低分</td>
+          <td>590</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">计算机科学与技术</li>
+              <li class="hoverschoolname">生物信息学</li>
+              <li class="hoverschoolname">行政管理</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>618</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  太原理工大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>理工类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">山西</td>
+          <td>最低分</td>
+          <td>590</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">数学与应用数学（金融数学方向）</li>
+              <li class="hoverschoolname">
+                化学工程与工艺（无机化工、有机化工、能源化工、高分子化工方向）
+              </li>
+              <li class="hoverschoolname">
+                应用化学（精细合成、现代工业分析技术、材料合成方向）
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>606</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  四川外国语大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>语言类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">重庆</td>
+          <td>最低分</td>
+          <td>590</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">审计学</li>
+              <li class="hoverschoolname">教育学</li>
+              <li class="hoverschoolname">社会工作</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  云南大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>综合类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">云南</td>
+          <td>最低分</td>
+          <td>589</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">
+                国际经济与贸易（中加合作嵌入式人才培养创新项目）
+              </li>
+              <li class="hoverschoolname">
+                财务管理（中加合作嵌入式人才培养创新项目）
+              </li>
+              <li class="hoverschoolname">物流管理（中外合作办学项目）</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>601</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  哈尔滨工程大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>理工类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">黑龙江</td>
+          <td>最低分</td>
+          <td>589</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">思想政治教育</li>
+              <li class="hoverschoolname">核化工与核燃料工程</li>
+              <li class="hoverschoolname">应用心理学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>589</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  南京工业大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">江苏</td>
+          <td>最低分</td>
+          <td>588</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">城市地下空间工程</li>
+              <li class="hoverschoolname">计算机科学与技术（嵌入式培养）</li>
+              <li class="hoverschoolname">食品科学与工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  中国民用航空飞行学院
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">四川</td>
+          <td>最低分</td>
+          <td>588</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">飞行技术</li>
+              <li class="hoverschoolname">交通运输</li>
+              <li class="hoverschoolname">飞行器动力工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>606</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  中国矿业大学（北京）
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>理工类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">北京</td>
+          <td>最低分</td>
+          <td>587</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">城市地下空间工程</li>
+              <li class="hoverschoolname">建筑学</li>
+              <li class="hoverschoolname">土木工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>619</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  西安理工大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">陕西</td>
+          <td>最低分</td>
+          <td>586</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">材料科学与工程</li>
+              <li class="hoverschoolname">材料成型及控制工程</li>
+              <li class="hoverschoolname">材料化学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>597</td>
+        </tr>
+
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  燕山大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">河北</td>
+          <td>最低分</td>
+          <td>586</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">机械设计制造及其自动化</li>
+              <li class="hoverschoolname">经济学</li>
+              <li class="hoverschoolname">国际经济与贸易</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>612</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  重庆医科大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>医药类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">重庆</td>
+          <td>最低分</td>
+          <td>586</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">英语</li>
+              <li class="hoverschoolname">公共事业管理</li>
+              <li class="hoverschoolname">信息管理与信息系统</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>601</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  四川外国语大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>语言类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">重庆</td>
+          <td>最低分</td>
+          <td>586</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">审计学</li>
+              <li class="hoverschoolname">教育学</li>
+              <li class="hoverschoolname">社会工作</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  青岛大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>综合类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">山东</td>
+          <td>最低分</td>
+          <td>585</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">哲学</li>
+              <li class="hoverschoolname">历史学</li>
+              <li class="hoverschoolname">经济统计</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  中国矿业大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>综合类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">江苏</td>
+          <td>最低分</td>
+          <td>584</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">采矿工程</li>
+              <li class="hoverschoolname">交通运输</li>
+              <li class="hoverschoolname">工业工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>610</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  扬州大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>综合类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">江苏</td>
+          <td>最低分</td>
+          <td>584</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">秘书学</li>
+              <li class="hoverschoolname">汉语国际教育</li>
+              <li class="hoverschoolname">哲学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>590</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  福建医科大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>医药类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">福建</td>
+          <td>最低分</td>
+          <td>584</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">临床医学（”5+3”一体化）</li>
+              <li class="hoverschoolname">临床医学（”5+3”一体化，儿科学）</li>
+              <li class="hoverschoolname">五年制临床医学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  武汉科技大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">湖北</td>
+          <td>最低分</td>
+          <td>583</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">人文地理与城乡规划</li>
+              <li class="hoverschoolname">矿物加工工程</li>
+              <li class="hoverschoolname">环境工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>594</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  中国石油大学（华东）
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>理工类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">山东</td>
+          <td>最低分</td>
+          <td>582</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">化学</li>
+              <li class="hoverschoolname">地质学</li>
+              <li class="hoverschoolname">地球物理学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>609</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  华侨大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>综合类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">福建</td>
+          <td>最低分</td>
+          <td>581</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">金融学</li>
+              <li class="hoverschoolname">投资学</li>
+              <li class="hoverschoolname">国际经济与贸易</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>596</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  合肥工业大学宣城校区
+                </p>
+              </div>
+              <p class="li-schoolabel"><span></span></p>
+            </div>
+          </td>
+          <td rowspan="2">安徽</td>
+          <td>最低分</td>
+          <td>581</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul"><ul></ul></td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>601</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  福州大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>理工类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">福建</td>
+          <td>最低分</td>
+          <td>580</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">过程装备与控制工程（面向泉州）</li>
+              <li class="hoverschoolname">化学工程与工艺（面向泉州）</li>
+              <li class="hoverschoolname">油气储运工程（面向泉州）</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>619</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  广州大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>综合类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">广东</td>
+          <td>最低分</td>
+          <td>580</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">生物科学</li>
+              <li class="hoverschoolname">环境科学与工程</li>
+              <li class="hoverschoolname">国际经济与贸易</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  集美大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>综合类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">福建</td>
+          <td>最低分</td>
+          <td>579</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">物流管理</li>
+              <li class="hoverschoolname">航海技术</li>
+              <li class="hoverschoolname">交通运输</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>589</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  贵州大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>综合类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">贵州</td>
+          <td>最低分</td>
+          <td>579</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">勘查技术与工程（工程地质方向）</li>
+              <li class="hoverschoolname">信息与计算科学</li>
+              <li class="hoverschoolname">经济学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>584</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  合肥工业大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>理工类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">安徽</td>
+          <td>最低分</td>
+          <td>578</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">测控技术与仪器</li>
+              <li class="hoverschoolname">光电信息科学与工程</li>
+              <li class="hoverschoolname">生物医学工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>623</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  河北大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>综合类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">河北</td>
+          <td>最低分</td>
+          <td>577</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">医学影像学</li>
+              <li class="hoverschoolname">预防医学</li>
+              <li class="hoverschoolname">中药学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>594</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  南京林业大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>双一流</span><span>农林类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">江苏</td>
+          <td>最低分</td>
+          <td>577</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">林学</li>
+              <li class="hoverschoolname">森林保护</li>
+              <li class="hoverschoolname">地理信息科学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>587</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  长沙理工大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">湖南</td>
+          <td>最低分</td>
+          <td>576</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">人力资源管理</li>
+              <li class="hoverschoolname">给排水科学与工程</li>
+              <li class="hoverschoolname">新闻学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>611</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  湘潭大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>综合类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">湖南</td>
+          <td>最低分</td>
+          <td>575</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">材料成型及控制工程</li>
+              <li class="hoverschoolname">应用化学</li>
+              <li class="hoverschoolname">物理学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>598</td>
+        </tr>
+
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  河北医科大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>医药类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">河北</td>
+          <td>最低分</td>
+          <td>575</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">临床医学（”5+3”一体化）</li>
+              <li class="hoverschoolname">临床医学</li>
+              <li class="hoverschoolname">麻醉学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>608</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  广西大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>综合类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">广西</td>
+          <td>最低分</td>
+          <td>575</td>
+
+          <td rowspan="2"><span class="l1">冲刺</span></td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">蚕学</li>
+              <li class="hoverschoolname">水产养殖学</li>
+              <li class="hoverschoolname">城乡规划</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>589</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  山东师范大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>师范类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">山东</td>
+          <td>最低分</td>
+          <td>574</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">信息管理与信息系统</li>
+              <li class="hoverschoolname">应用物理学</li>
+              <li class="hoverschoolname">物理学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>601</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  陕西师范大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>师范类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">陕西</td>
+          <td>最低分</td>
+          <td>573</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">思想政治教育</li>
+              <li class="hoverschoolname">思想政治教育（创新实验班）</li>
+              <li class="hoverschoolname">哲学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>573</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  长春理工大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">吉林</td>
+          <td>最低分</td>
+          <td>573</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">光电信息科学与工程</li>
+              <li class="hoverschoolname">机械电子工程</li>
+              <li class="hoverschoolname">生物工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>594</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  青岛科技大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">山东</td>
+          <td>最低分</td>
+          <td>573</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">机械工程（中德）</li>
+              <li class="hoverschoolname">金属材料工程</li>
+              <li class="hoverschoolname">无机非金属材料工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>583</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  广东医科大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>医药类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">广东</td>
+          <td>最低分</td>
+          <td>572</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">信息资源管理</li>
+              <li class="hoverschoolname">医学影像学</li>
+              <li class="hoverschoolname">统计学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>599</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  东北电力大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">吉林</td>
+          <td>最低分</td>
+          <td>572</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">智能科学与技术</li>
+              <li class="hoverschoolname">核工程与核技术</li>
+              <li class="hoverschoolname">材料成型及控制工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>631</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  湖北大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>综合类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">湖北</td>
+          <td>最低分</td>
+          <td>572</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">建筑环境与设备工程</li>
+              <li class="hoverschoolname">预防医学</li>
+              <li class="hoverschoolname">工程力学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>586</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  哈尔滨理工大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">黑龙江</td>
+          <td>最低分</td>
+          <td>572</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">食品科学与工程</li>
+              <li class="hoverschoolname">
+                电气工程及其自动化（大珩精英实验班）
+              </li>
+              <li class="hoverschoolname">化学工程与工艺</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>599</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  福建师范大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>师范类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">福建</td>
+          <td>最低分</td>
+          <td>572</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">教育学</li>
+              <li class="hoverschoolname">学前教育</li>
+              <li class="hoverschoolname">小学教育</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>592</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  江苏科技大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">江苏</td>
+          <td>最低分</td>
+          <td>572</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">能源与动力工程</li>
+              <li class="hoverschoolname">建筑环境与能源应用工程</li>
+              <li class="hoverschoolname">新能源科学与工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>584</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  江苏大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>综合类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">江苏</td>
+          <td>最低分</td>
+          <td>572</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">测控技术与仪器</li>
+              <li class="hoverschoolname">机械设计制造及其自动化</li>
+              <li class="hoverschoolname">机械电子工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>584</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  山东科技大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">山东</td>
+          <td>最低分</td>
+          <td>571</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">工商管理</li>
+              <li class="hoverschoolname">软件工程</li>
+              <li class="hoverschoolname">资源勘查工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  天津师范大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>师范类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">天津</td>
+          <td>最低分</td>
+          <td>571</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">汉语言文学</li>
+              <li class="hoverschoolname">汉语国际教育</li>
+              <li class="hoverschoolname">英语</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>591</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  成都理工大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>双一流</span><span>理工类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">四川</td>
+          <td>最低分</td>
+          <td>571</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">地质学类（地质学）</li>
+              <li class="hoverschoolname">地质学类（地球化学）</li>
+              <li class="hoverschoolname">地质学类（地球信息科学与技术）</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  重庆交通大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">重庆</td>
+          <td>最低分</td>
+          <td>569</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">产品设计</li>
+              <li class="hoverschoolname">环境设计</li>
+              <li class="hoverschoolname">广播电视学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>583</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  天津外国语大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>语言类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">天津</td>
+          <td>最低分</td>
+          <td>569</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">英语</li>
+              <li class="hoverschoolname">翻译</li>
+              <li class="hoverschoolname">商务英语</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>585</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  中国刑事警察学院
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>政法类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">辽宁</td>
+          <td>最低分</td>
+          <td>569</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">公安情报学</li>
+              <li class="hoverschoolname">信息安全</li>
+              <li class="hoverschoolname">公安视听技术</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  西北农林科技大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>985</span><span>双一流</span
+                ><span>农林类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">陕西</td>
+          <td>最低分</td>
+          <td>568</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">农学</li>
+              <li class="hoverschoolname">植物科学与技术</li>
+              <li class="hoverschoolname">种子科学与工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>614</td>
+        </tr>
+
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  武汉工程大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">湖北</td>
+          <td>最低分</td>
+          <td>568</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">能源与动力工程</li>
+              <li class="hoverschoolname">化学工程与工艺</li>
+              <li class="hoverschoolname">制药工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>581</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  内蒙古大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>综合类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">内蒙古</td>
+          <td>最低分</td>
+          <td>568</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">表演（二人台表演）</li>
+              <li class="hoverschoolname">动画</li>
+              <li class="hoverschoolname">艺术设计</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>596</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  上海师范大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>综合类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">上海</td>
+          <td>最低分</td>
+          <td>567</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">汉语言文学（基地班）</li>
+              <li class="hoverschoolname">汉语言文学（师范）</li>
+              <li class="hoverschoolname">历史学（师范）</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>602</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  吉林财经大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>财经类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">吉林</td>
+          <td>最低分</td>
+          <td>567</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">金融学</li>
+              <li class="hoverschoolname">电子商务</li>
+              <li class="hoverschoolname">财政学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  四川师范大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>师范类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">四川</td>
+          <td>最低分</td>
+          <td>567</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">汉语国际教育</li>
+              <li class="hoverschoolname">动画</li>
+              <li class="hoverschoolname">戏剧影视美术设计</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  东北林业大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>农林类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">黑龙江</td>
+          <td>最低分</td>
+          <td>566</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">木材科学与工程</li>
+              <li class="hoverschoolname">材料化学</li>
+              <li class="hoverschoolname">高分子材料与工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>594</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  三峡大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>综合类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">湖北</td>
+          <td>最低分</td>
+          <td>566</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">日语</li>
+              <li class="hoverschoolname">法语</li>
+              <li class="hoverschoolname">英语</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  河南大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>双一流</span><span>综合类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">河南</td>
+          <td>最低分</td>
+          <td>566</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">汉语言文学（师范类）</li>
+              <li class="hoverschoolname">汉语言文学（秘书学方向）</li>
+              <li class="hoverschoolname">汉语国际教育</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>578</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  湖北工业大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">湖北</td>
+          <td>最低分</td>
+          <td>565</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">金融学</li>
+              <li class="hoverschoolname">土木工程</li>
+              <li class="hoverschoolname">产品设计</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>574</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  重庆师范大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>师范类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">重庆</td>
+          <td>最低分</td>
+          <td>565</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">音乐学</li>
+              <li class="hoverschoolname">思想政治教育</li>
+              <li class="hoverschoolname">历史学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>566</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  上海海洋大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>双一流</span><span>农林类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">上海</td>
+          <td>最低分</td>
+          <td>565</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">水产养殖学</li>
+              <li class="hoverschoolname">水族科学与技术</li>
+              <li class="hoverschoolname">水生动物医学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  北京建筑大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">北京</td>
+          <td>最低分</td>
+          <td>564</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">计算机科学与技术</li>
+              <li class="hoverschoolname">建筑电气与智能化</li>
+              <li class="hoverschoolname">历史建筑保护工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  山西大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>综合类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">山西</td>
+          <td>最低分</td>
+          <td>563.13</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">汉语言文学</li>
+              <li class="hoverschoolname">戏剧影视文学</li>
+              <li class="hoverschoolname">汉语国际教育</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>578.11</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  南昌航空大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">江西</td>
+          <td>最低分</td>
+          <td>563</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">高分子材料与工程</li>
+              <li class="hoverschoolname">复合材料与工程</li>
+              <li class="hoverschoolname">无机非金属材料工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>592</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  中北大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">山西</td>
+          <td>最低分</td>
+          <td>562.12</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">飞行器设计与工程</li>
+              <li class="hoverschoolname">飞行器制造工程</li>
+              <li class="hoverschoolname">武器系统与工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>582.12</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  陕西科技大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">陕西</td>
+          <td>最低分</td>
+          <td>562</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">人力资源管理</li>
+              <li class="hoverschoolname">自动化</li>
+              <li class="hoverschoolname">化学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>578</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  广东以色列理工学院
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">广东</td>
+          <td>最低分</td>
+          <td>562</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">化学工程与工艺</li>
+              <li class="hoverschoolname">生物技术</li>
+              <li class="hoverschoolname">材料科学与工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>580</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  华南农业大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>综合类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">广东</td>
+          <td>最低分</td>
+          <td>562</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">日语</li>
+              <li class="hoverschoolname">海洋科学</li>
+              <li class="hoverschoolname">风景园林</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>583</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  天津工业大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>双一流</span><span>理工类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">天津</td>
+          <td>最低分</td>
+          <td>562</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">表演</li>
+              <li class="hoverschoolname">纺织工程</li>
+              <li class="hoverschoolname">非织造材料与工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>604</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  北京物资学院
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>财经类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">北京</td>
+          <td>最低分</td>
+          <td>561</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">物流管理</li>
+              <li class="hoverschoolname">劳动与社会保障</li>
+              <li class="hoverschoolname">信息与计算科学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  上海商学院
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>财经类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">上海</td>
+          <td>最低分</td>
+          <td>560</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">工商管理</li>
+              <li class="hoverschoolname">零售业管理</li>
+              <li class="hoverschoolname">市场营销</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>565</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  东北师范大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>师范类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">吉林</td>
+          <td>最低分</td>
+          <td>560</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">新闻学</li>
+              <li class="hoverschoolname">经济学</li>
+              <li class="hoverschoolname">运动训练</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>653</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  湖北经济学院
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>财经类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">湖北</td>
+          <td>最低分</td>
+          <td>559</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">经济学</li>
+              <li class="hoverschoolname">商务经济学</li>
+              <li class="hoverschoolname">
+                资源与环境经济学（低碳经济与管理项目）
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>563</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  广东金融学院
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>财经类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">广东</td>
+          <td>最低分</td>
+          <td>559</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">物流管理</li>
+              <li class="hoverschoolname">电子商务</li>
+              <li class="hoverschoolname">金融数学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>587</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  北京印刷学院
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">北京</td>
+          <td>最低分</td>
+          <td>559</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">文化产业管理</li>
+              <li class="hoverschoolname">传播学</li>
+              <li class="hoverschoolname">数字媒体技术</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  哈尔滨医科大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>医药类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">黑龙江</td>
+          <td>最低分</td>
+          <td>557</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">临床医学（本硕连读）</li>
+              <li class="hoverschoolname">基础医学（本硕连读）</li>
+              <li class="hoverschoolname">生物信息学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>631</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  上海工程技术大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">上海</td>
+          <td>最低分</td>
+          <td>555</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">机械电子工程</li>
+              <li class="hoverschoolname">机械工程</li>
+              <li class="hoverschoolname">能源与动力工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>565</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  上海第二工业大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">上海</td>
+          <td>最低分</td>
+          <td>555</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">机械工程（卓越工程师班）</li>
+              <li class="hoverschoolname">机械工程</li>
+              <li class="hoverschoolname">车辆工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>564</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  重庆工商大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>财经类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">重庆</td>
+          <td>最低分</td>
+          <td>555</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">商务英语</li>
+              <li class="hoverschoolname">金融工程</li>
+              <li class="hoverschoolname">土地资源管理</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>577</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  西南石油大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>双一流</span><span>综合类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">四川</td>
+          <td>最低分</td>
+          <td>555</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">会计学</li>
+              <li class="hoverschoolname">公共事业管理</li>
+              <li class="hoverschoolname">机械电子工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>576</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  成都信息工程大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">四川</td>
+          <td>最低分</td>
+          <td>555</td>
+
+          <td rowspan="2">
+            <span class="l2">稳妥</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">视觉传达设计</li>
+              <li class="hoverschoolname">汉语国际教育</li>
+              <li class="hoverschoolname">社会工作</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  天津科技大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">天津</td>
+          <td>最低分</td>
+          <td>553.12</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">木材科学与工程</li>
+              <li class="hoverschoolname">化学</li>
+              <li class="hoverschoolname">汽车服务工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>568</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  西南民族大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>民族类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">四川</td>
+          <td>最低分</td>
+          <td>553.11</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">社会体育指导与管理</li>
+              <li class="hoverschoolname">英语（旅游英语）</li>
+              <li class="hoverschoolname">产品设计</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  青岛理工大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">山东</td>
+          <td>最低分</td>
+          <td>553</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">建筑电气与智能化</li>
+              <li class="hoverschoolname">建筑环境与能源应用工程</li>
+              <li class="hoverschoolname">车辆工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  北京工商大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>财经类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">北京</td>
+          <td>最低分</td>
+          <td>553</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">
+                应用统计学（风险和精算）（国际合作）
+              </li>
+              <li class="hoverschoolname">化学（轻化产品质量分析）</li>
+              <li class="hoverschoolname">应用化学（理工类）</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  湖北汽车工业学院
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">湖北</td>
+          <td>最低分</td>
+          <td>552</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">物流管理</li>
+              <li class="hoverschoolname">市场营销</li>
+              <li class="hoverschoolname">电气工程及其自动化</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>558</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  河南财经政法大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>财经类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">河南</td>
+          <td>最低分</td>
+          <td>552</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">软件技术（Java方向）</li>
+              <li class="hoverschoolname">计算机信息管理</li>
+              <li class="hoverschoolname">计算机网络技术</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>571</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  四川农业大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>农林类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">四川</td>
+          <td>最低分</td>
+          <td>552</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">化学生物学（理科）</li>
+              <li class="hoverschoolname">信息与计算科学（理科）</li>
+              <li class="hoverschoolname">应用化学（理科）</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  重庆理工大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">重庆</td>
+          <td>最低分</td>
+          <td>551.09</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">财务管理</li>
+              <li class="hoverschoolname">信息管理与信息系统</li>
+              <li class="hoverschoolname">通信工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>569.12</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  安徽师范大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>师范类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">安徽</td>
+          <td>最低分</td>
+          <td>551</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">汉语言文学（教师教育类）</li>
+              <li class="hoverschoolname">
+                卓越语文教师（实验班）（汉语言文学）
+              </li>
+              <li class="hoverschoolname">汉语言文学（应用类）</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>579</td>
+        </tr>
+
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  潍坊医学院
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>医药类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">山东</td>
+          <td>最低分</td>
+          <td>551</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">市场营销</li>
+              <li class="hoverschoolname">口腔医学</li>
+              <li class="hoverschoolname">医学影像学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>581</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  北京师范大学-香港浸会大学联合国际学院
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>综合类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">广东</td>
+          <td>最低分</td>
+          <td>551</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">传播学</li>
+              <li class="hoverschoolname">会计学</li>
+              <li class="hoverschoolname">人力资源管理</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>616</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  沈阳工业大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">辽宁</td>
+          <td>最低分</td>
+          <td>551</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">数据科学与大数据技术</li>
+              <li class="hoverschoolname">煤化工技术</li>
+              <li class="hoverschoolname">工业分析技术</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  成都中医药大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>双一流</span><span>医药类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">四川</td>
+          <td>最低分</td>
+          <td>551</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">藏医学</li>
+              <li class="hoverschoolname">康复治疗学</li>
+              <li class="hoverschoolname">针灸推拿学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  湖南科技大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>综合类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">湖南</td>
+          <td>最低分</td>
+          <td>550</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">安全工程</li>
+              <li class="hoverschoolname">采矿工程</li>
+              <li class="hoverschoolname">测绘工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>580</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  河北师范大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>师范类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">河北</td>
+          <td>最低分</td>
+          <td>550</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">计算机科学与技术</li>
+              <li class="hoverschoolname">真知（实验班）</li>
+              <li class="hoverschoolname">旅游管理与服务教育</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>577</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  华北水利水电大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">河南</td>
+          <td>最低分</td>
+          <td>549</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">水利水电工程</li>
+              <li class="hoverschoolname">农业水利工程</li>
+              <li class="hoverschoolname">水文与水资源工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  河北金融学院
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>财经类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">河北</td>
+          <td>最低分</td>
+          <td>549</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">投资学</li>
+              <li class="hoverschoolname">物流管理</li>
+              <li class="hoverschoolname">法学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  长安大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>理工类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">陕西</td>
+          <td>最低分</td>
+          <td>548</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">道路桥梁与渡河工程（基地班）</li>
+              <li class="hoverschoolname">交通工程</li>
+              <li class="hoverschoolname">交通工程（国际班）</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  中国矿业大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>综合类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">江苏</td>
+          <td>最低分</td>
+          <td>547</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">采矿工程</li>
+              <li class="hoverschoolname">交通运输</li>
+              <li class="hoverschoolname">工业工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>551</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  辽宁师范大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>师范类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">辽宁</td>
+          <td>最低分</td>
+          <td>546</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">思想政治教育（师范）</li>
+              <li class="hoverschoolname">应用心理学（师范）</li>
+              <li class="hoverschoolname">心理学（师范）</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  南京工程学院
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">江苏</td>
+          <td>最低分</td>
+          <td>546</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">机械设计制造及其自动化</li>
+              <li class="hoverschoolname">机械电子工程</li>
+              <li class="hoverschoolname">工业工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  北方工业大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">北京</td>
+          <td>最低分</td>
+          <td>545</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">微电子科学与工程</li>
+              <li class="hoverschoolname">统计学</li>
+              <li class="hoverschoolname">信息与计算科学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  云南财经大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>财经类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">云南</td>
+          <td>最低分</td>
+          <td>544</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">泰语</li>
+              <li class="hoverschoolname">酒店管理（高等职业教育普通本科）</li>
+              <li class="hoverschoolname">旅游管理（高等职业教育普通本科）</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>561</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  西安财经大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>财经类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">陕西</td>
+          <td>最低分</td>
+          <td>544</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">广播电视学</li>
+              <li class="hoverschoolname">工业工程</li>
+              <li class="hoverschoolname">物流管理</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>554</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  桂林电子科技大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">广西</td>
+          <td>最低分</td>
+          <td>544</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">通信工程</li>
+              <li class="hoverschoolname">电子信息工程</li>
+              <li class="hoverschoolname">电子科学与技术</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>560</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  成都医学院
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>医药类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">四川</td>
+          <td>最低分</td>
+          <td>544</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">临床医学</li>
+              <li class="hoverschoolname">医学影像学</li>
+              <li class="hoverschoolname">预防医学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  苏州科技大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>综合类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">江苏</td>
+          <td>最低分</td>
+          <td>543.11</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">建筑学</li>
+              <li class="hoverschoolname">城乡规划</li>
+              <li class="hoverschoolname">风景园林</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>555.11</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  黑龙江大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>综合类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">黑龙江</td>
+          <td>最低分</td>
+          <td>543</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">农业资源与环境</li>
+              <li class="hoverschoolname">给排水科学与工程</li>
+              <li class="hoverschoolname">工商管理</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>566</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  海南大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>综合类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">海南</td>
+          <td>最低分</td>
+          <td>543</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">农业资源与环境</li>
+              <li class="hoverschoolname">财务管理（企业理财方向）</li>
+              <li class="hoverschoolname">电子科学与技术</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>605</td>
+        </tr>
+
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  烟台大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>综合类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">山东</td>
+          <td>最低分</td>
+          <td>543</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">海洋科学</li>
+              <li class="hoverschoolname">生物工程</li>
+              <li class="hoverschoolname">生物技术</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>553</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  哈尔滨师范大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>师范类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">黑龙江</td>
+          <td>最低分</td>
+          <td>543</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">生态学</li>
+              <li class="hoverschoolname">葡萄牙语</li>
+              <li class="hoverschoolname">园林</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>547</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  云南师范大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>师范类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">云南</td>
+          <td>最低分</td>
+          <td>542.12</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">华文教育（师范，招收文史类考生）</li>
+              <li class="hoverschoolname">泰语（非师范，文理兼招）</li>
+              <li class="hoverschoolname">越南语（非师范，文理兼招）</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>562.13</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  河北经贸大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>财经类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">河北</td>
+          <td>最低分</td>
+          <td>542</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">新闻学（经济新闻方向）</li>
+              <li class="hoverschoolname">文化产业管理</li>
+              <li class="hoverschoolname">电子信息工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  沈阳师范大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>师范类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">辽宁</td>
+          <td>最低分</td>
+          <td>542</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">法学</li>
+              <li class="hoverschoolname">古生物学</li>
+              <li class="hoverschoolname">行政管理</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  新疆大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>综合类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">新疆</td>
+          <td>最低分</td>
+          <td>541</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">药学</li>
+              <li class="hoverschoolname">给排水科学与工程</li>
+              <li class="hoverschoolname">水利水电工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>564</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  天津中医药大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>双一流</span><span>医药类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">天津</td>
+          <td>最低分</td>
+          <td>541</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">
+                中医学（”5+3”一体化（中医儿科学））
+              </li>
+              <li class="hoverschoolname">
+                中医学（拔尖创新人才培养模式改革9年制班）
+              </li>
+              <li class="hoverschoolname">中医学（”5+3”一体化）</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>619</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  天津城建大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>综合类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">天津</td>
+          <td>最低分</td>
+          <td>541</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">应用物理学</li>
+              <li class="hoverschoolname">建筑学</li>
+              <li class="hoverschoolname">城乡规划</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>567</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  山西财经大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>财经类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">山西</td>
+          <td>最低分</td>
+          <td>541</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">文化产业管理</li>
+              <li class="hoverschoolname">金融数学</li>
+              <li class="hoverschoolname">审计学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>563</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  曲阜师范大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>师范类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">山东</td>
+          <td>最低分</td>
+          <td>540.13</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">通信工程</li>
+              <li class="hoverschoolname">动画</li>
+              <li class="hoverschoolname">经济学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>560.13</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  石家庄铁道大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">河北</td>
+          <td>最低分</td>
+          <td>540</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">建筑环境与能源应用工程</li>
+              <li class="hoverschoolname">勘查技术与工程</li>
+              <li class="hoverschoolname">英语</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>591</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  山东政法学院
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>政法类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">山东</td>
+          <td>最低分</td>
+          <td>540</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">英语</li>
+              <li class="hoverschoolname">国际经济与贸易</li>
+              <li class="hoverschoolname">法学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>562</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  天津商业大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>财经类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">天津</td>
+          <td>最低分</td>
+          <td>539</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">机械设计制造及其自动化</li>
+              <li class="hoverschoolname">电子商务</li>
+              <li class="hoverschoolname">物流管理</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>565</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  中南民族大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>综合类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">湖北</td>
+          <td>最低分</td>
+          <td>538</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">化学生物学</li>
+              <li class="hoverschoolname">药物制剂</li>
+              <li class="hoverschoolname">药学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  山东理工大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">山东</td>
+          <td>最低分</td>
+          <td>538</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">矿物加工工程</li>
+              <li class="hoverschoolname">采矿工程</li>
+              <li class="hoverschoolname">市场营销</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>553</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  昆明理工大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">云南</td>
+          <td>最低分</td>
+          <td>538</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">交通运输（飞行运行管理方向）</li>
+              <li class="hoverschoolname">
+                通信工程（电子系统与机载设备方向）
+              </li>
+              <li class="hoverschoolname">物流工程（航空物流方向）</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>573</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  山东中医药大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>医药类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">山东</td>
+          <td>最低分</td>
+          <td>537</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">中西医临床医学</li>
+              <li class="hoverschoolname">针灸推拿学</li>
+              <li class="hoverschoolname">康复治疗学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>563</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  大连交通大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">辽宁</td>
+          <td>最低分</td>
+          <td>537</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">计算机科学与技术</li>
+              <li class="hoverschoolname">英语/软件工程</li>
+              <li class="hoverschoolname">日语/软件工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>606</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  沈阳药科大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>医药类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">辽宁</td>
+          <td>最低分</td>
+          <td>537</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">药物制剂</li>
+              <li class="hoverschoolname">药学</li>
+              <li class="hoverschoolname">药学（英语强化班）</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>626</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  西安科技大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">陕西</td>
+          <td>最低分</td>
+          <td>536</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">安全工程</li>
+              <li class="hoverschoolname">消防工程</li>
+              <li class="hoverschoolname">采矿工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>538</td>
+        </tr>
+
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  哈尔滨金融学院
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>财经类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">黑龙江</td>
+          <td>最低分</td>
+          <td>535</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">劳动与社会保障</li>
+              <li class="hoverschoolname">信息管理与信息系统</li>
+              <li class="hoverschoolname">资产评估</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>542</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  北京师范大学珠海分校
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>其他</span></p>
+            </div>
+          </td>
+          <td rowspan="2">广东</td>
+          <td>最低分</td>
+          <td>535</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">播音与主持艺术</li>
+              <li class="hoverschoolname">表演学（艺术类）</li>
+              <li class="hoverschoolname">动画</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>549</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  东北农业大学
+                </p>
+              </div>
+              <p class="li-schoolabel">
+                <span>211</span><span>双一流</span><span>农林类</span>
+              </p>
+            </div>
+          </td>
+          <td rowspan="2">黑龙江</td>
+          <td>最低分</td>
+          <td>535</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">汉语国际教育</li>
+              <li class="hoverschoolname">广播电视编导</li>
+              <li class="hoverschoolname">信息与计算科学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>542</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  湖南财政经济学院
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>财经类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">湖南</td>
+          <td>最低分</td>
+          <td>534</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">土地资源管理</li>
+              <li class="hoverschoolname">工程管理</li>
+              <li class="hoverschoolname">电子信息工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>541</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  东北石油大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">黑龙江</td>
+          <td>最低分</td>
+          <td>533</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">资源勘查工程</li>
+              <li class="hoverschoolname">勘查技术与工程</li>
+              <li class="hoverschoolname">地球物理学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>534</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  上海应用技术大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">上海</td>
+          <td>最低分</td>
+          <td>532</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">
+                材料科学与工程（卓越工程师计划试点班）（无机非金属材料方向）
+              </li>
+              <li class="hoverschoolname">
+                机械设计制造及其自动化（卓越工程师试点班）（数字化设计与制造方向）
+              </li>
+              <li class="hoverschoolname">
+                电气工程及其自动化（卓越工程师试点班）（智能电网、电力电子与电力传动方）
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>553</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  滨州医学院
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>医药类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">山东</td>
+          <td>最低分</td>
+          <td>530.12</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">特殊教育</li>
+              <li class="hoverschoolname">护理学</li>
+              <li class="hoverschoolname">临床医学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  广西师范大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>师范类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">广西</td>
+          <td>最低分</td>
+          <td>530</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">秘书学（职教师资班）</li>
+              <li class="hoverschoolname">金融学</li>
+              <li class="hoverschoolname">制药工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>557</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  常州大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">江苏</td>
+          <td>最低分</td>
+          <td>530</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">轻化工程</li>
+              <li class="hoverschoolname">应用化学</li>
+              <li class="hoverschoolname">化学工程与工艺</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>551</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  大连大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>综合类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">辽宁</td>
+          <td>最低分</td>
+          <td>530</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">会计学（中外合作办学）</li>
+              <li class="hoverschoolname">旅游管理（中外合作办学）</li>
+              <li class="hoverschoolname">自动化</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>590</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  新疆医科大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>医药类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">新疆</td>
+          <td>最低分</td>
+          <td>530</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">临床医学</li>
+              <li class="hoverschoolname">生物医学工程</li>
+              <li class="hoverschoolname">医学影像学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>540</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  西安工业大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">陕西</td>
+          <td>最低分</td>
+          <td>529.5</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">测控技术与仪器</li>
+              <li class="hoverschoolname">光电信息科学与工程</li>
+              <li class="hoverschoolname">电子科学与技术</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>537</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  武汉轻工大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">湖北</td>
+          <td>最低分</td>
+          <td>529</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">食品质量与安全</li>
+              <li class="hoverschoolname">粮食工程</li>
+              <li class="hoverschoolname">化学工程与工艺</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>546</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  金陵科技学院
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">江苏</td>
+          <td>最低分</td>
+          <td>529</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">会计学</li>
+              <li class="hoverschoolname">财务管理</li>
+              <li class="hoverschoolname">市场营销</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  长春工业大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">吉林</td>
+          <td>最低分</td>
+          <td>528</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">工业工程</li>
+              <li class="hoverschoolname">动画</li>
+              <li class="hoverschoolname">广播电视编导</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>531</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  山东工商学院
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>财经类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">山东</td>
+          <td>最低分</td>
+          <td>527</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">软件工程</li>
+              <li class="hoverschoolname">信息与计算科学（软件开发）</li>
+              <li class="hoverschoolname">信息与计算科学（嵌入式开发）</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>559</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  南通大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>综合类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">江苏</td>
+          <td>最低分</td>
+          <td>527</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">汉语言文学</li>
+              <li class="hoverschoolname">汉语国际教育</li>
+              <li class="hoverschoolname">秘书学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>558</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  广东药科大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>医药类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">广东</td>
+          <td>最低分</td>
+          <td>527</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">中澳（4）</li>
+              <li class="hoverschoolname">保险</li>
+              <li class="hoverschoolname">中意（4）</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>565</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  湖北医药学院
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>医药类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">湖北</td>
+          <td>最低分</td>
+          <td>526</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">制药工程</li>
+              <li class="hoverschoolname">生物科学与生物技术</li>
+              <li class="hoverschoolname">医学美容技术</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>536</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  大连医科大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>医药类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">辽宁</td>
+          <td>最低分</td>
+          <td>526</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">中西医临床医学</li>
+              <li class="hoverschoolname">护理学</li>
+              <li class="hoverschoolname">临床医学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>--</td>
+        </tr>
+
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  湖南商学院
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>财经类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">湖南</td>
+          <td>最低分</td>
+          <td>525</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">审计学</li>
+              <li class="hoverschoolname">金融学（卓越金融CFA班）</li>
+              <li class="hoverschoolname">会计学</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>536.1</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  湖北师范大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>师范类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">湖北</td>
+          <td>最低分</td>
+          <td>525</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">资源环境与城乡规划管理</li>
+              <li class="hoverschoolname">汉语国际教育</li>
+              <li class="hoverschoolname">电子信息工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>535</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  山东建筑大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>理工类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">山东</td>
+          <td>最低分</td>
+          <td>525</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">
+                道路桥梁与渡河工程（轨道交通方向）
+              </li>
+              <li class="hoverschoolname">交通工程</li>
+              <li class="hoverschoolname">德语</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>555</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  鲁东大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>综合类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">山东</td>
+          <td>最低分</td>
+          <td>525</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">物流工程</li>
+              <li class="hoverschoolname">电气工程及其自动化</li>
+              <li class="hoverschoolname">环境工程</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>546</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  中国劳动关系学院
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>政法类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">北京</td>
+          <td>最低分</td>
+          <td>525</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">安全工程</li>
+              <li class="hoverschoolname">播音与主持（专科）</li>
+              <li class="hoverschoolname">数控技术（专科）</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>548</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="width300">
+            <div class="li-imgTd clearfix">
+              <div class="name_hot">
+                <p class="li-schoolname">
+                  湖南中医药大学
+                </p>
+              </div>
+              <p class="li-schoolabel"><span>医药类</span></p>
+            </div>
+          </td>
+          <td rowspan="2">湖南</td>
+          <td>最低分</td>
+          <td>525</td>
+
+          <td rowspan="2">
+            <span class="l3">保底</span>
+          </td>
+          <td rowspan="2" class="li-tab-ul">
+            <ul>
+              <li class="hoverschoolname">中医学（”5+3”一体化，本硕连读）</li>
+              <li class="hoverschoolname">公共事业管理</li>
+              <li class="hoverschoolname">市场营销</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最高分</td>
+          <td>598</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
